@@ -1,0 +1,29 @@
+{
+  "name": "Titech Login",
+  "description": "Titech Login",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "browser_action": {
+    "default_title": "Set this page's color.",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "page":"background.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["content_script.js"],
+      "matches": [
+        "https://portal.nap.gsic.titech.ac.jp/GetAccess/Login?Template=idg_key&AUTHMETHOD=IG&GASF=CERTIFICATE,IG.GRID,IG.OTP&LOCALE=ja_JP&GAREASONCODE=13&GAIDENTIFICATIONID=UserPassword&GARESOURCEID=resourcelistID2&GAURI=https://portal.nap.gsic.titech.ac.jp/GetAccess/ResourceList&Reason=13&APPID=resourcelistID2&URI=https://portal.nap.gsic.titech.ac.jp/GetAccess/ResourceList",
+        "https://portal.nap.gsic.titech.ac.jp/GetAccess/Login"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+
+  "manifest_version": 2
+}

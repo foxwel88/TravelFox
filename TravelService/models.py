@@ -15,7 +15,7 @@ class Log(models.Model):
     log_desc = models.CharField(max_length=50, blank=True, null=True)
 
 
-class TravelUser(models.Model):
+class NoteUser(models.Model):
     user_name = models.CharField(max_length=20)
     user_icon = models.CharField(max_length=250, blank=True, null=True)
     user_phone = models.CharField(max_length=20, blank=True, null=True, unique=True)

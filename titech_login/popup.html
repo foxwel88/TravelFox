@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Titech login</title>
+    <style>
+    body {
+      overflow: hidden;
+      margin: 0px;
+      padding: 0px;
+
+      background: white;
+    }
+
+    div:first-child {
+      margin-top: 0px;
+    }
+
+    .butt {
+      cursor: pointer;
+      text-align: center;
+      padding: 1px 3px;
+      font-family: sans-serif;
+      font-size: 0.8em;
+      width: 140px;
+      margin-top: 1px;
+      background: #cccccc;
+    }
+    div:hover {
+      background: #aaaaaa;
+    }
+    </style>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div >
+      <div class="butt" id="login">Login (auto verify)</div>
+      <div class="butt" id="verify">Verify</div>
+      <div class="butt" id="setting">Setting</div>
+    </div>
+    
+    <set id="setting_pan" style="display: none;">
+      <input id="student_id" style="width: 100%;" placeholder="Student ID"></input>
+      <input id="password"  style="width: 100%;" type="password" placeholder="Password"></input>
+      <div style="height:130px;">
+        <div style="left:0;position:absolute;width:10px;">
+          <text>&nbsp;</text>
+          <text>1</text>
+          <text>2</text>
+          <text>3</text>
+          <text>4</text>
+          <text>5</text>
+          <text>6</text>
+          <text>7</text>
+        </div>
+        <div style="right:0;position:absolute;width:130px;">
+          <text style="margin-left: 2px;">  A B C D E F G H I J</text>
+          <textarea id="matrix" style="width: 120px;height:106px;text-transform:uppercase;letter-spacing: 1px;resize: none;"></textarea>
+        </div>
+      </div>
+      <div class="butt" id="submit">save</div>
+    </set>
+  </body>
+</html>
